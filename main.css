@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container, 
+section .container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    padding: 16px 0 0;
+    background-color: rgb(36, 36, 243);
+    margin-bottom: 56px;
+    color: #fff;
+}
+
+header li {
+    display: inline;
+}
+
+header li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px;
+} 
+
+.container-flex {
+    display: flex;
+}
+
+.sobre-loja {
+    padding: 16px;
+}
+
+#sobre-loja img {
+    margin-right: 32px;
+    width: 50%;
+    max-width: 400px;
+}
+
+section .container {
+    align-items: flex-start;
+}
+
+section {
+    padding: 48px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+    border-bottom: 1px solid lightskyblue;
+    color: lightskyblue;
+    padding: 16px 0;
+    display: block;
+}
+
+section p {
+    margin-bottom: 4px;
+    display: block;
+    font-family: Roboto, sans-serif;
+}
+
+.livros {
+    flex-wrap: wrap;
+}
+
+.livros li {
+    list-style: none;
+    max-width: 30%;
+    margin-bottom: 24px;
+}
+
+#livros li img {
+    max-width: 100%;
+    margin-bottom: 8px;
+}
+
+.livros li h3 {
+    margin: 8px 0;
+}
+
+.livros li p {
+    margin: 8px 0;
+}
+
+.item-central {
+    margin: 0 5%;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #119750;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+
+    .container-flex {
+        flex-direction: column;
+    }
+
+    header .container {
+        display: block;
+    }
+
+    header li {
+        display: inline;
+    }
+
+
+    #sobre-loja img {
+        width: 100%;
+    }
+
+    .sobre-loja p {
+        width: 100%;
+    }
+
+    #livros li img {
+        width: 100%;
+    }
+
+    .livros {
+        align-items: center;
+        padding: 16px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        display: block;
+        width: 90%;
+    }
+
+    header li {
+        display: inline;
+    }
+
+    #sobre-loja img {
+        width: 100%;
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .sobre-loja p {
+        width: 100%;
+    }
+
+    #livros li img {
+        width: 100%;
+    }
+
+    .livros {
+        grid-template-columns: repeat(2, 49%);
+    }
+}
