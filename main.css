@@ -76,7 +76,10 @@ section p {
 }
 
 .livros {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    column-gap: 2%;
+    row-gap: 1%;
 }
 
 .livros li {
@@ -87,7 +90,6 @@ section p {
 
 #livros li img {
     max-width: 100%;
-    margin-bottom: 8px;
 }
 
 .livros li h3 {
@@ -122,7 +124,7 @@ button {
     }
 
     .container-flex {
-        flex-direction: column;
+        display: block;
     }
 
     header > .container {
@@ -132,7 +134,6 @@ button {
     header li {
         display: inline;
     }
-
 
     #sobre-loja img {
         width: 100%;
@@ -147,8 +148,11 @@ button {
     }
 
     .livros {
-        align-items: center;
-        padding: 16px;
+        grid-template-columns: 1fr;
+    }
+
+    #livros li {
+        max-width: 100%;    
     }
 
     button {
@@ -179,11 +183,21 @@ button {
         width: 100%;
     }
 
-    #livros li img {
-        width: 100%;
+    .livros {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    #livros li {
+        max-width: 100%;
     }
 }
 
 @media screen and (min-width: 1024px) {
+    .livros {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
+    #livros li {
+        max-width: 100%;
+    }
 }
