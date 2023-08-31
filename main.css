@@ -94,10 +94,12 @@ section p {
 
 .livros li h3 {
     margin: 8px 0;
+    min-height: 80px;
 }
 
 .livros li p {
     margin: 8px 0;
+    min-height: 80px;
 }
 
 .item-central {
@@ -152,7 +154,7 @@ button {
     }
 
     #livros li {
-        max-width: 100%;    
+        max-width: 100%;  
     }
 
     button {
